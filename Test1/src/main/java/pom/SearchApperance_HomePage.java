@@ -1,9 +1,12 @@
 package pom;
 
+import static org.testng.Assert.assertEquals;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.testng.Assert;
 
 import generic.BaseTest;
 
@@ -23,5 +26,9 @@ public void checkSearchAppearances()
 	searchAppearance.getText();
 	
 	System.out.println(searchAppearance.getText());
+	String A = "7465";
+	String B = searchAppearance.getText();
+	Assert.assertEquals(A,B);
+	System.out.println(driver.getTitle());
 }
 }
